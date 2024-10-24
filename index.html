@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MOH AYP Platform</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content=" Template" name="keywords">
+        <meta content="Template" name="description">
+<style>
+
+    .carousel {
+    position: relative; /* Ensure the carousel is positioned relative to stack child elements */
+}
+
+.background-photo {
+    position: absolute; /* Position it absolutely within the carousel container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path/to/your/background-photo.jpg'); /* Replace with your background photo URL */
+    background-size: cover; /* Adjust the size to cover the entire container */
+    background-position: center; /* Center the background image */
+    z-index: 1; /* Set a lower z-index so it's behind the carousel items */
+}
+
+.owl-carousel {
+    position: relative; /* Ensure carousel items are stacked above the background photo */
+    z-index: 2; /* Ensure carousel items have a higher z-index than the background photo */
+}
+
+
+
+/* Keyframes for continuous zoom effect */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.carousel-img img {
+    height: 300px; /* Set your desired height */
+    object-fit: cover; /* Ensure the image covers the specified height without distortion */
+    width: 100%;
+    animation: zoomIn 10s infinite; /* Apply animation, adjust duration as needed */
+}
+
+
+
+            .team-img img {
+                height: 300px; /* Set your desired height */
+                object-fit: cover; /* Ensure the image covers the specified height without distortion */
+                width: 100%;
+            }
+
+    .partners-section {
+    background-color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.partners-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.static-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.static-logos img {
+    height: 50px;
+}
+
+        </style>
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+
+    <!-- Top Bar Start -->
+<div class="top-bar d-none d-md-block">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="top-bar-left">
+                    <div class="text">
+                        <i class="fa fa-phone-alt"></i>
+                        <a href="tel:+254700000000"> <p>+254700000000</p> </a>
+                    </div>
+                    <div class="text">
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:mail@health@go.ke"> <p>mail@health@go.ke</p> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="top-bar-right">
+                    <div class="social">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Top Bar End -->
+
+<!-- Nav Bar Start -->
+<div class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+        <a href="health.go.ke"><img src="img/img/moh_new-removebg-preview.png" alt="moh logo"width="300vw"></a>
+        <h6 class="navbar-brand">Interactive Platform</h6>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="resources.html" class="nav-item nav-link">Resources</a>
+                <a href="maps.html" class="nav-item nav-link">Facilities</a>
+<!--                <a href="Understanding Adolescents.html" class="nav-item nav-link">Events</a>-->
+<!--                <a href="resources.html" class="nav-item nav-link">Blog</a>-->
+<!--&lt;!&ndash;                <div class="nav-item dropdown">&ndash;&gt;-->
+<!--                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>-->
+<!--                    <div class="dropdown-menu">-->
+<!--                        <a href="RH Policy.html" class="dropdown-item">Detail Page</a>-->
+<!--                        <a href="Survey Report.html" class="dropdown-item">What We Do</a>-->
+<!--                        <a href="team.html" class="dropdown-item">Meet The Team</a>-->
+<!--                        <a href="donate.html" class="dropdown-item">Donate Now</a>-->
+<!--                        <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <a href="" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Nav Bar End -->
+
+<!-- Carousel Start -->
+<div class="carousel">
+    <div class="container-fluid">
+        <!-- Background Photo -->
+        <div class="background-photo"><img src="img/img/Untitled design.png" alt=""></div>
+
+        <div class="owl-carousel">
+            <div class="carousel-item">
+                <div class="carousel-img">
+                    <img src="img/New approach to adolescents/1.png" alt="Image">
+                </div>
+                <div class="carousel-text">
+                    <h1>New Approach to Adolescents and Young People Sensitization</h1>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-img">
+                    <img src="img/New approach to adolescents/2.png" alt="Image">
+                </div>
+                <div class="carousel-text">
+                    <h1>Get involved,<br>Engage!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Carousel End -->
+
+        <!-- About Start -->
+        <div class="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img" data-parallax="scroll" data-image-src="img/New approach to adolescents/3.png" ></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="section-header">
+                            <p>Learn About Us</p>
+                            <h2>Division of Reproductive and Maternal Health </h2>
+                        </div>
+                        <div class="about-tab">
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="pill" href="#tab-content-1">Vision</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#tab-content-3">Goal</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div id="tab-content-1" class="container tab-pane active">
+                                    To ensure a high quality and efficient Reproductive Health (RH) care system, which is accessible, equitable, and affordable for every Kenyan.
+                                </div>
+                                <div id="tab-content-2" class="container tab-pane fade">
+                                    To ensure high quality, integrated promotive, preventive, curative, and rehabilitative Reproductive Health services to all Kenyans.
+                                </div>
+                                <div id="tab-content-3" class="container tab-pane fade">
+Our goal is to ensure the provision of a comprehensive, integrated system of reproductive healthcare, through a range of services offered by the government and its partners including Non-Government Agencies and the Private Sector                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+       <!-- Service Start -->
+    <div class="service">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>What We Do?</p>
+                <h2>We believe that we can impact lives with you</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <a href="books.html" class="service-item-link">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i><img src="img/img/book flaticon.png" alt="" width="70px" height="70px"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>IEC Material(Guides and Booklets)</h3>
+                                <p>Access educational materials like guidebooks and pamphlets on SRH, including information on puberty, safe practices, and HIV/AIDS prevention.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="policies strat.html" class="service-item-link">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i><img src="img/img/policy flaticon.png" alt="" width="70px" height="70px"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Policies in place</h3>
+                                <p>Find information on Kenya's health policies, covering guidelines and frameworks for providing comprehensive SRH services and ensuring quality healthcare for all.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="Laws .html" class="service-item-link">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i><img src="img/img/law flaticon.png" alt="" width="70px" height="70px"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Laws and legislation</h3>
+                                <p>Explore the legal framework governing SRH in Kenya, including laws that protect reproductive rights, prevent gender-based violence, and promote safe healthcare practices.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="" class="service-item-link">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-education"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Public Education and Awareness campaigns</h3>
+                                <p>Learn about national campaigns aimed at raising awareness on SRH issues, promoting healthy behaviors, and educating the public on available health services.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="Gallery.html" class="service-item-link">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i><img src="img/img/video flaticon.png" alt="" width="70px" height="70px"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Creative Arts and Digital Media</h3>
+                                <p>Discover how creative arts and media initiatives are used to spread SRH information, through films, theatre, music, and social media to engage and educate the community.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="" class="service-item-link">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-social-care"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Community Social Support</h3>
+                                <p>Explore community-based programs providing social support for SRH, including peer education, counseling services, and support groups for various health challenges.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+        
+<!--        &lt;!&ndash; Facts Start &ndash;&gt;-->
+<!--        <div class="facts" data-parallax="scroll" data-image-src="img/facts.jpg">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="facts-item">-->
+<!--                            <i class="flaticon-home"></i>-->
+<!--                            <div class="facts-text">-->
+<!--                                <h3 class="facts-plus" data-toggle="counter-up">150</h3>-->
+<!--                                <p>Countries</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="facts-item">-->
+<!--                            <i class="flaticon-charity"></i>-->
+<!--                            <div class="facts-text">-->
+<!--                                <h3 class="facts-plus" data-toggle="counter-up">400</h3>-->
+<!--                                <p>Volunteers</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="facts-item">-->
+<!--                            <i class="flaticon-kindness"></i>-->
+<!--                            <div class="facts-text">-->
+<!--                                <h3 class="facts-dollar" data-toggle="counter-up">10000</h3>-->
+<!--                                <p>Our Goal</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="facts-item">-->
+<!--                            <i class="flaticon-donation"></i>-->
+<!--                            <div class="facts-text">-->
+<!--                                <h3 class="facts-dollar" data-toggle="counter-up">5000</h3>-->
+<!--                                <p>Raised</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; Facts End &ndash;&gt;-->
+        
+        
+
+        <!-- Event Start -->
+        <div class="event">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Upcoming Events</p>
+                    <h2>Be ready for our upcoming events</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="event-item">
+                            <img src="img/event-1.jpg" alt="Image">
+                            <div class="event-content">
+                                <div class="event-meta">
+                                    <p><i class="fa fa-calendar-alt"></i>26-Jul-2024</p>
+                                    <p><i class="far fa-clock"></i>8:00 - 10:00</p>
+                                    <p><i class="fa fa-map-marker-alt"></i>Nairobi</p>
+                                </div>
+                                <div class="event-text">
+                                    <h3>Validation Meeting </h3>
+                                    <p>
+                                        Join us as we validate the "Understanding Adolescense Parents' Guide book"
+                                    </p>
+<!--                                    <a class="btn btn-custom" href="">Join Now</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="event-item">
+                            <img src="img/event-2.jpg" alt="Image">
+                            <div class="event-content">
+                                <div class="event-meta">
+                                    <p><i class="fa fa-calendar-alt"></i>31-Jul-24</p>
+                                    <p><i class="far fa-clock"></i>8:00 - 10:00</p>
+                                    <p><i class="fa fa-map-marker-alt"></i>Karatina</p>
+                                </div>
+                                <div class="event-text">
+                                    <h3>Chief's Baraza</h3>
+                                    <p>
+                                      learn about initiatives in Nyeri region <br> Come One, Come All!!
+                                    </p>
+<!--                                    <a class="btn btn-custom" href="">Join Now</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event End -->
+
+
+        <!-- Team Start -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Meet Our Team</p>
+<!--                    <h2>Awesome guys behind our activities</h2>-->
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/people/amoth.png" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Dr.Patrick Amoth</h2>
+                                <p>DG. MOH</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/people/bashir.jpeg" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Dr. Bashir Issak</h2>
+                                <p>Head- Directorate of Family Health</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/people/serem.jpeg" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Dr. Edward Serem</h2>
+                                <p>Head- DRMH</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/people/Mary magubo.png" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Mary Magubo</h2>
+                                <p>SBC Manager</p>
+                                <div class="team-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--         Team End-->
+
+
+
+
+        <!-- Testimonial Start -->
+        <div class="testimonial">
+            <div class="container">
+
+                <div class="owl-carousel testimonials-carousel">
+                    <div class="testimonial-item">
+                        <div class="testimonial-profile">
+                            <img src="img/people/Angel Talia.png" alt="Image">
+                            <div class="testimonial-name">
+                                <h3>Talia Waniru</h3>
+                                <p>Graphic Design</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-profile">
+                            <img src="img/people/Vanessa Mokeira.jpeg" alt="Image">
+                            <div class="testimonial-name">
+                                <h3>Vanessa Mokeira</h3>
+                                <p>Tujulishane Kenya</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-profile">
+                            <img src="img/img/youth female 2.png" alt="Image">
+                            <div class="testimonial-name">
+                                <h3>Wambui Nyaga</h3>
+                                <p>Nyandarua</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-profile">
+                            <img src="img/img/youth male 1.png" alt="Image">
+                            <div class="testimonial-name">
+                                <h3>Aloysius Omollo</h3>
+                                <p>Vihiga</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+<!--    partners-->
+
+
+<section class="partners-section">
+    <div class="partners-title">Our Partners</div>
+    <div class="static-logos">
+        <img src="img/logos/logo black nobgAsset 5@2x.png" alt="3M" />
+        <img src="img/logos/faith 2 action.png" alt="f2a" />
+        <img src="img/logos/moh_new-removebg-preview.png" alt="Budweiser" />
+        <img src="img/logos/ujulishane Kenya dark text transparent bg.png" alt="Buzzfeed" />
+<!--        <img src="./logos/forbes.svg" alt="Forbes" />-->
+<!--        <img src="./logos/macys.svg" alt="Macy's" />-->
+<!--        <img src="./logos/menshealth.svg" alt="Men's Health" />-->
+<!--        <img src="./logos/mrbeast.svg" alt="MrBeast" />-->
+    </div>
+</section>
+
+
+
+
+
+<!--        partners-->
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <div class="footer-link">
+    <p><a href="https://maps.app.goo.gl/KeCC8CmQn2Rffr8c9"><i class="fa fa-map-marker-alt"></i>Afya House, Upperhill</a>  </p>
+    <p><a href="tel:+254700000000"><i class="fa fa-phone-alt"></i>+254700000000</a></p>
+    <p><a href="mailto:mail@health.go.ke"><i class="fa fa-envelope"></i> mail@health.go.ke</a></p>
+</div>
+
+
+                            <div class="footer-social">
+                                <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="">About Us</a>
+                            <a href="">Contact Us</a>
+                            <a href="">Resources</a>
+<!--                            <a href="">Upcoming Events</a>-->
+<!--                            <a href="">Latest Blog</a>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Useful Links</h2>
+                            <a href="">Terms of use</a>
+                            <a href="">Privacy policy</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <img src="img/img/moh_new-removebg-preview.png" alt="" width="100%">
+                        <br><br>
+                        <img src="img/img/logo white nobgAsset 3@2x.png" alt="" width="75px">
+
+<!--                        <div class="footer-newsletter">-->
+<!--                            <h2>Newsletter</h2>-->
+<!--                            <form>-->
+<!--                                <input class="form-control" placeholder="Email goes here">-->
+<!--                                <button class="btn btn-custom">Submit</button>-->
+<!--                                <label>Don't worry, we don't spam!</label>-->
+<!--                            </form>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">DRMH</a>, All Right Reserved.</p>
+                    </div>
+<!--                    <div class="col-md-6">-->
+<!--                        <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize carousel (assuming you are using Owl Carousel)
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        items: 1
+    });
+
+    // Add a smooth scroll effect for anchor links
+    $('a[href^="#"]').on('click', function(event) {
+        event.preventDefault();
+        var target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 1000);
+    });
+
+    // Add any additional JavaScript functionality here
+});
+</script>
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '668a2c22567e900c27954bb1' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
+
+    </body>
+</html>

@@ -9,8 +9,33 @@
 <style>
 
     .carousel {
-    position: relative; /* Ensure the carousel is positioned relative to stack child elements */
+    position: relative; /* Position the carousel to stack child elements */
+    overflow: hidden; /* Hide the overflow to create the zoom effect */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
 }
+
+.carousel-img img {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensure image covers the specified area without distortion */
+    transform-origin: center; /* Set zoom origin to the center */
+    animation: zoomEffect 10s infinite ease-in-out; /* Smooth zoom in/out */
+}
+
+/* Keyframes for zooming in only */
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1); /* Start at the original size */
+    }
+    50% {
+        transform: scale(1.2); /* Zoom in to 1.2x the original size */
+    }
+    100% {
+        transform: scale(1); /* Return to the original size */
+    }
+}
+
 
 .background-photo {
     position: absolute; /* Position it absolutely within the carousel container */
@@ -27,28 +52,6 @@
 .owl-carousel {
     position: relative; /* Ensure carousel items are stacked above the background photo */
     z-index: 2; /* Ensure carousel items have a higher z-index than the background photo */
-}
-
-
-
-/* Keyframes for continuous zoom effect */
-@keyframes zoomIn {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.carousel-img img {
-    height: 300px; /* Set your desired height */
-    object-fit: cover; /* Ensure the image covers the specified height without distortion */
-    width: 100%;
-    animation: zoomIn 10s infinite; /* Apply animation, adjust duration as needed */
 }
 
 
@@ -175,7 +178,7 @@
         <div class="owl-carousel">
             <div class="carousel-item">
                 <div class="carousel-img">
-                    <img src="img/New approach to adolescents/1.png" alt="Image">
+                    <img src="img/New approach to adolescents/youth main.avif" alt="Image">
                 </div>
                 <div class="carousel-text">
                     <h1>New Approach to Adolescents and Young People Sensitization</h1>
@@ -183,7 +186,7 @@
             </div>
             <div class="carousel-item">
                 <div class="carousel-img">
-                    <img src="img/New approach to adolescents/2.png" alt="Image">
+                    <img src="img/New approach to adolescents/youth 2.avif" alt="Image">
                 </div>
                 <div class="carousel-text">
                     <h1>Get involved,<br>Engage!</h1>
@@ -199,7 +202,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <div class="about-img" data-parallax="scroll" data-image-src="img/New approach to adolescents/3.png" ></div>
+                        <div class="about-img" data-parallax="scroll" data-image-src="img/New approach to adolescents/youth 1.avif" ></div>
                     </div>
                     <div class="col-lg-6">
                         <div class="section-header">
@@ -681,7 +684,7 @@ Our goal is to ensure the provision of a comprehensive, integrated system of rep
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
 
-    <script>
+   <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize carousel (assuming you are using Owl Carousel)
     $('.owl-carousel').owlCarousel({
@@ -691,7 +694,7 @@ document.addEventListener('DOMContentLoaded', function() {
         items: 1
     });
 
-    // Add a smooth scroll effect for anchor links
+    // Smooth scroll effect for anchor links
     $('a[href^="#"]').on('click', function(event) {
         event.preventDefault();
         var target = $(this).attr('href');
@@ -699,10 +702,9 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollTop: $(target).offset().top
         }, 1000);
     });
-
-    // Add any additional JavaScript functionality here
 });
 </script>
+
 <script type="text/javascript">
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
